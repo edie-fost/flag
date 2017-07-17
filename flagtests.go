@@ -2,11 +2,13 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"log"
 )
 
 func main() {
 	var sdf string
+	fmt.Println("Syntax: cmd -sdf=??? mm-yyy")
 	flag.StringVar(&sdf, "sdf", "", "sdf")
 	flag.Parse()
 	s := flag.Args()
