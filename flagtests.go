@@ -7,11 +7,13 @@ import (
 )
 
 func main() {
-	var sdf string
-	fmt.Println("Syntax: cmd -sdf=??? mm-yyy")
-	flag.StringVar(&sdf, "sdf", "", "sdf")
+	var sdf, vdf string
+	fmt.Println("Syntax: cmd -v=???  -p= ??? mm-yyy")
+	flag.StringVar(&sdf, "p", "", "p")
+	flag.StringVar(&vdf, "v", "", "v")
 	flag.Parse()
 	s := flag.Args()
+	fmt.Println("num: ", flag.NArg(), "args: ", s)
 	parsedates(s)
 	log.Println("s:", s, "Len: ", len(s), "N: ", flag.NArg())
 }
