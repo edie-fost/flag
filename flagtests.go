@@ -20,6 +20,7 @@ func main() {
 	log.Println("s:", s, "Len: ", len(s), "N: ", flag.NArg())
 }
 
+// parse comments
 func parsedates(t []string) {
 	log.Println("t:", t, "Len: ", len(t))
 	log.Println("first ", t[0], t[1])
