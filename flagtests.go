@@ -10,14 +10,16 @@ import (
 
 func main() {
 	var sdf, vdf string
-	fmt.Println("Syntax: cmd -v=???  -p= ??? mm-yyy")
+	fmt.Println("Syntax: cmd v=???  p= ??? mm-yyy")
 	flag.StringVar(&sdf, "p", "", "p")
 	flag.StringVar(&vdf, "v", "", "v")
 	flag.Parse()
 	s := flag.Args()
-	fmt.Println("num: ", flag.NArg(), "args: ", s)
-	parsedates(s)
-	log.Println("s:", s, "Len: ", len(s), "N: ", flag.NArg())
+	if len(s) > 0 {
+		fmt.Println("num: ", flag.NArg(), "args: ", s)
+		parsedates(s)
+		log.Println("s:", s, "Len: ", len(s), "N: ", flag.NArg())
+	}
 }
 
 // parse comments
