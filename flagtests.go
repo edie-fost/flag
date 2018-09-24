@@ -10,6 +10,7 @@ import (
 
 func main() {
 	var sdf, vdf string
+	fmt.Printf("Testing flags and args.\n")
 	fmt.Println("Syntax: cmd v=???  p= ??? mm-yyy")
 	flag.StringVar(&sdf, "p", "", "p")
 	flag.StringVar(&vdf, "v", "", "v")
