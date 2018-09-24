@@ -1,4 +1,4 @@
-// comments here
+// comments here would be a good idea
 
 package main
 
